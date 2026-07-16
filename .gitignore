@@ -99,3 +99,6 @@ poetry.lock
 _site/
 book/
 docs/.vitepress/dist/
+
+# --- Git data ---
+oooo_git_repo/
