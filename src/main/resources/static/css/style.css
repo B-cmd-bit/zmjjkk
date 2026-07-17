@@ -1,0 +1,98 @@
+﻿/* ============================================================
+ * AI校园学习助手系统 - 全局样式表
+ * ============================================================ */
+
+/* 页面基础样式 */
+body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* 卡片悬停效果 */
+.hover-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* 聊天消息样式 */
+.message-bubble {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    word-break: break-word;
+}
+.message-user {
+    background-color: #e3f2fd;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+.message-ai {
+    background-color: #f5f5f5;
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+}
+
+/* Markdown渲染样式 */
+#chatMessages pre,
+#articleResult pre,
+#codeResult pre {
+    background-color: #f4f4f4;
+    border-radius: 6px;
+    padding: 12px;
+    overflow-x: auto;
+}
+#chatMessages code,
+#articleResult code,
+#codeResult code {
+    font-family: "Consolas", "Monaco", "Courier New", monospace;
+    font-size: 0.9em;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* 后台管理表格行悬停 */
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* 加载动画 */
+.loading-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #dee2e6;
+    border-top-color: #0d6efd;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .message-bubble {
+        max-width: 95%;
+    }
+    .admin-sidebar {
+        display: none;
+    }
+}
